@@ -5,6 +5,14 @@ body {
   position: relative;
 }
 
+.nonav {
+  padding-top: 0;
+}
+  .nonav .title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+  }
+
 body > .container,
 .container {
   padding-left:  15px;
