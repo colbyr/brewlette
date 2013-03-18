@@ -1,14 +1,21 @@
 @import url(http://fonts.googleapis.com/css?family=Dancing+Script:400,700);
 
 body {
+  background-color: #FFFDFA;
+  color: #23313A;
   padding-top: 54px;
   position: relative;
 }
 
+p {
+  font-family: Georgia, Serif;
+}
+
 .nonav {
-  padding-top: 0;
+  padding-top: 5px;
 }
   .nonav .title {
+    color: #4C3619;
     font-family: 'Dancing Script', cursive;
     font-size: 4em;
   }
@@ -22,4 +29,17 @@ body > .container,
 .navbar-brand {
   font-family: 'Dancing Script', cursive;
   font-size: 2em;
+}
+
+.brewlette .info {
+  font-size: 1.25em;
+}
+  .brewlette .info img {
+    margin-bottom: 1em;
+  }
+
+.brewlette .invite {
+  background-color: #BB5D50;
+  border-color: #BB5D50;
+  margin-top: 1em;
 }
