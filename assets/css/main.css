@@ -15,7 +15,8 @@ p {
   padding-top: 5px;
 }
   .nonav .title,
-  .nonav .title a {
+  .nonav .title a,
+  h1, h2 {
     color: #4C3619;
   }
   .nonav .title {
@@ -51,3 +52,31 @@ body > .container,
   .brewlette .invite:hover {
     background-color: #d46f60;
   }
+
+.brewlette .navbar {
+  background-color: #4C3619;
+}
+  .brewlette .navbar a,
+  .brewlette .navbar .nav a {
+    color: #FFFDFA;
+  }
+  .brewlette .navbar a:hover,
+  .brewlette .navbar .nav a:hover {
+    color: #FFF;
+  }
+  .brewlette .navbar .in ul {
+    font-size: 1.25em;
+    float: none;
+    text-align: center;
+  }
+    .brewlette .navbar .in ul li {
+      border-top: 1px solid #fff;
+    }
+
+  .brewlette .navbar-toggle {
+    background: transparent;
+    color: #fff;
+  }
+    .brewlette .navbar-toggle .icon-bar {
+      background-color: #fff;
+    }
