@@ -14,8 +14,11 @@ p {
 .nonav {
   padding-top: 5px;
 }
-  .nonav .title {
+  .nonav .title,
+  .nonav .title a {
     color: #4C3619;
+  }
+  .nonav .title {
     font-family: 'Dancing Script', cursive;
     font-size: 4em;
   }
@@ -41,5 +44,4 @@ body > .container,
 .brewlette .invite {
   background-color: #BB5D50;
   border-color: #BB5D50;
-  margin-top: 1em;
 }
