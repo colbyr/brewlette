@@ -48,3 +48,6 @@ body > .container,
   background-color: #BB5D50;
   border-color: #BB5D50;
 }
+  .brewlette .invite:hover {
+    background-color: #d46f60;
+  }
