@@ -34,8 +34,11 @@ body > .container,
   font-size: 2em;
 }
 
+.brewlette .action {
+  margin-top: 1em;
+}
+
 .brewlette .info {
-  font-size: 1.25em;
 }
   .brewlette .info img {
     margin-bottom: 1em;
