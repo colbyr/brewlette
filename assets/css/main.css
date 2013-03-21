@@ -62,21 +62,40 @@ body > .container,
   }
   .brewlette .navbar a:hover,
   .brewlette .navbar .nav a:hover {
-    color: #FFF;
+    color: #FFFDFA;
   }
-  .brewlette .navbar .in ul {
-    font-size: 1.25em;
-    float: none;
-    text-align: center;
-  }
-    .brewlette .navbar .in ul li {
-      border-top: 1px solid #fff;
+    .brewlette .navbar .glyphicon {
+      color: #FFFDFA;
+      display: block;
+      float: left;
+      margin-right: .5em;
+      margin-top: 3px;
     }
+
+@media screen and (max-width: 768px) {
+  .brewlette .navbar {
+    padding: 10px 0;
+  }
+    .brewlette .navbar .container {
+      padding: 0;
+    }
+    .brewlette .navbar .glyphicon {
+      margin-top: 0;
+    }
+    .brewlette .navbar ul {
+      font-size: 1.25em;
+      float: none;
+    }
+      .brewlette .navbar ul > li {
+        border-top: 1px solid rgba(255,255,255,.20)
+      }
 
   .brewlette .navbar-toggle {
     background: transparent;
-    color: #fff;
+    color: #FFFDFA;
   }
     .brewlette .navbar-toggle .icon-bar {
-      background-color: #fff;
+      background-color: #FFFDFA;
     }
+
+}
