@@ -3,7 +3,7 @@ $(function ($) {
   var $container = $('#main');
   var $toggle = $('.navbar-toggle');
 
-  $('body').on('click', 'a[href!="#"]', function (e) {
+  $('body').on('click', 'a[href]', function (e) {
     e.preventDefault();
     var $tar = $(e.currentTarget);
     if (document.documentElement.clientWidth < 756 &&
