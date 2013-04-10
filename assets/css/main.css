@@ -39,6 +39,13 @@ body > .container,
   margin-top: 1em;
 }
 
+.brewlette .coffee-break .list-group-flush {
+  margin-top: -1px;
+}
+.brewlette .coffee-break .panel-heading {
+  margin-bottom: 0;
+}
+
 .brewlette .info {
 }
   .brewlette .info img {
@@ -74,15 +81,12 @@ body > .container,
     }
 
 @media screen and (max-width: 768px) {
-  .brewlette .coffee-break .list-group-flush {
-    margin-top: -1px;
-  }
-  .brewlette .coffee-break .panel-heading {
-    margin-bottom: 0;
-  }
   .brewlette .navbar {
     padding: 10px 0;
   }
+    .brewlette .navbar .navbar-brand:hover {
+      color: #FFFDFA;
+    }
     .brewlette .navbar a,
     .brewlette .navbar a:hover,
     .brewlette .navbar .nav a,
