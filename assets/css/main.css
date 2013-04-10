@@ -49,6 +49,22 @@ body > .container,
   margin-top: 1em;
 }
 
+.brewlette .placeholder {
+  height: 90px;
+}
+.brewlette .break-header {
+  box-shadow: 1px -2px 5px rgba(0,0,0,0.5) inset;
+  height: 80px;
+  left: 0;
+  padding: 20px 0 0 10px;
+  position: absolute;
+  right: 0;
+}
+  .brewlette .break-header h3 {
+    color: #FFFDFA;
+    text-shadow: 0.07em 0.07em #333;
+  }
+
 .brewlette .coffee-break {
   color: #4C3619;
 }
@@ -68,6 +84,11 @@ body > .container,
     .brewlette .coffee-break .panel-heading .info {
       margin-bottom: 5px;
     }
+
+.brewlette .coffee-breaks a:active,
+.brewlette .coffee-breaks a:hover {
+  text-decoration: none;
+}
 
 .brewlette .info {
 }
