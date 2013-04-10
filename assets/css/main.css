@@ -3,8 +3,12 @@
 body {
   background-color: #FFFDFA;
   color: #23313A;
-  padding-top: 70px;
+  padding-top: 54px;
   position: relative;
+}
+
+i.glyphicon {
+  vertical-align: middle;
 }
 
 p {
@@ -39,12 +43,25 @@ body > .container,
   margin-top: 1em;
 }
 
-.brewlette .coffee-break .list-group-flush {
-  margin-top: -1px;
+.brewlette .coffee-break {
+  color: #4C3619;
 }
-.brewlette .coffee-break .panel-heading {
-  margin-bottom: 0;
-}
+  .brewlette .coffee-break a {
+    color: #BB5D50;
+  }
+  .brewlette .coffee-break .list-group-flush {
+    margin-top: -1px;
+  }
+  .brewlette .coffee-break .panel-heading {
+    color: #FFFDFA;
+    margin-bottom: 0;
+    height: 80px;
+    padding-top: 45px;
+    text-shadow: 0.1em 0.1em #333;
+  }
+    .brewlette .coffee-break .panel-heading .info {
+      margin-bottom: 5px;
+    }
 
 .brewlette .info {
 }
