@@ -15,6 +15,21 @@ p {
   font-family: Georgia, Serif;
 }
 
+.brewlette .navbar .back {
+  border-right: 1px solid rgba(255,255,255,.5);
+  display: none;
+  font-size: 1.25em;
+  height: 54px;
+  padding: 17px 8px 0 15px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  vertical-align: middle;
+}
+  .brewlette .navbar .back .glyphicon {
+    color: #FFFDFA;
+  }
+
 .loader {
   display: none;
   margin-top: 40%;

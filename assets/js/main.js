@@ -1,9 +1,31 @@
 $(function ($) {
 
   var $container = $('#main');
+  var $back = $('#back');
   var $loader = $('#loader');
   var $toggle = $('.navbar-toggle');
-  var current_url = null;
+
+  var current = '/app/index.html';
+  var history = [];
+
+  function back() {
+    if (history.length) {
+      current = history.pop();
+      navigate(current);
+    }
+    if (history.length === 0) {
+      $back.hide();
+    }
+  }
+
+  function forward(url) {
+    $back.show();
+    if (current !== url) {
+      history.push(current);
+      current = url;
+      navigate(url);
+    }
+  }
 
   function linkHandler(e) {
     var $tar = $(e.currentTarget);
@@ -16,17 +38,23 @@ $(function ($) {
       $toggle.click();
     }
 
-    if (url !== '#' && url !== current_url) {
-      current_url = url;
-      $container.hide();
-      $loader.show();
-      $.get('/partials' + $tar.attr('href'), function (data) {
-        $loader.hide();
-        $container.html(data).show();
-      });
+    if (url !== '#' && url !== current) {
+      forward(url);
     }
   }
 
+  function navigate(url) {
+    $container.hide();
+    $loader.show();
+    $.get('/partials' + url, function (data) {
+      $loader.hide();
+      $container.html(data).show();
+    });
+  }
+
   $('body').on('click', 'a[href]', linkHandler);
+  $back.click(function (e) {
+    back();
+  });
 
 });
