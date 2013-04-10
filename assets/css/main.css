@@ -56,11 +56,12 @@ body > .container,
 .brewlette .navbar {
   background-color: #4C3619;
 }
-  .brewlette .navbar a,
-  .brewlette .navbar .nav a {
+  .brewlette .navbar .navbar-brand {
     color: #FFFDFA;
   }
+  .brewlette .navbar a,
   .brewlette .navbar a:hover,
+  .brewlette .navbar .nav a,
   .brewlette .navbar .nav a:hover {
     color: #FFFDFA;
   }
@@ -76,18 +77,26 @@ body > .container,
   .brewlette .navbar {
     padding: 10px 0;
   }
+    .brewlette .navbar a,
+    .brewlette .navbar a:hover,
+    .brewlette .navbar .nav a,
+    .brewlette .navbar .nav a:hover {
+      color: #4C3619;
+    }
     .brewlette .navbar .container {
       padding: 0;
     }
     .brewlette .navbar .glyphicon {
+      color: #4C3619;
       margin-top: 0;
     }
     .brewlette .navbar ul {
+      background-color: #FFFDFA;
       font-size: 1.25em;
       float: none;
     }
       .brewlette .navbar ul > li {
-        border-top: 1px solid rgba(255,255,255,.20)
+        border-top: 1px solid #4C3619;
       }
 
   .brewlette .navbar-toggle {
