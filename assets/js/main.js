@@ -1,9 +1,6 @@
 $(function ($) {
 
-  var $container = $('#main');
-  var $toggle = $('.navbar-toggle');
-
-  $('body').on('click', 'a[href]', function (e) {
+  function linkHandler(e) {
     e.preventDefault();
     var $tar = $(e.currentTarget);
     if (document.documentElement.clientWidth < 756 &&
@@ -11,10 +8,24 @@ $(function ($) {
       $toggle.click();
     }
     if ($tar.attr('href') !== '#') {
+      $container.hide();
+      $loader.show();
       $.get('/partials' + $tar.attr('href'), function (data) {
-        $container.html(data);
+        $loader.hide();
+        $container.html(data).show();
       });
     }
-  });
+  }
+
+  var $container = $('#main');
+  var $loader = $('#loader');
+  var $toggle = $('.navbar-toggle');
+
+  if ('ontouchstart' in document.documentElement) {
+    $('body').on('tap', 'a[href]', linkHandler);
+    $('body').on('click', 'a[href]', function (e) { e.preventDefault(); });
+  } else {
+    $('body').on('click', 'a[href]', linkHandler);
+  }
 
 });

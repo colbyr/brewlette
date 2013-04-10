@@ -15,6 +15,12 @@ p {
   font-family: Georgia, Serif;
 }
 
+.loader {
+  display: none;
+  margin-top: 40%;
+  text-align: center;
+}
+
 .nonav {
   padding-top: 5px;
 }
