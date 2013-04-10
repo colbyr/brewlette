@@ -3,7 +3,7 @@
 body {
   background-color: #FFFDFA;
   color: #23313A;
-  padding-top: 54px;
+  padding-top: 70px;
   position: relative;
 }
 
@@ -74,6 +74,12 @@ body > .container,
     }
 
 @media screen and (max-width: 768px) {
+  .brewlette .coffee-break .list-group-flush {
+    margin-top: -1px;
+  }
+  .brewlette .coffee-break .panel-heading {
+    margin-bottom: 0;
+  }
   .brewlette .navbar {
     padding: 10px 0;
   }
