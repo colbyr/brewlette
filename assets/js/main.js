@@ -27,11 +27,6 @@ $(function ($) {
     }
   }
 
-  if ('ontouchstart' in document.documentElement) {
-    $('body').on('tap', 'a[href]', linkHandler);
-    $('body').on('click', 'a[href]', function (e) { e.preventDefault(); });
-  } else {
-    $('body').on('click', 'a[href]', linkHandler);
-  }
+  $('body').on('click', 'a[href]', linkHandler);
 
 });
