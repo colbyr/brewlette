@@ -3,6 +3,7 @@ $(function ($) {
   var $container = $('#main');
   var $back = $('#back');
   var $loader = $('#loader');
+  var $title = $('#page-title');
   var $toggle = $('.navbar-toggle');
 
   var current = '/app/index.html';
@@ -27,6 +28,16 @@ $(function ($) {
     }
   }
 
+  function root(title, url) {
+    $title.html(title);
+    $back.hide();
+    history = [];
+    if (current !== url) {
+      current = url;
+      navigate(url);
+    }
+  }
+
   function linkHandler(e) {
     var $tar = $(e.currentTarget);
     var url = $tar.attr('href');
@@ -38,7 +49,9 @@ $(function ($) {
       $toggle.click();
     }
 
-    if (url !== '#' && url !== current) {
+    if ($tar.data('root')) {
+      root($tar.data('root'), url);
+    } else if (url !== '#' && url !== current) {
       forward(url);
     }
   }
