@@ -147,34 +147,49 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
   border-color: #BB5D50;
 }
 
-@media screen and (max-width: 768px) {
-
-  .brewlette .fixed-list {
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 55px;
+.brewlette .fixed-list {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 55px;
+}
+  .brewlette .fixed-list input {
+    border-left: 0;
+    border-radius: 0;
+    border-right: 0;
+    border-top: 0;
+    box-shadow: 0 1px 5px #333;
+    padding-left: 35px;
+    padding-top: 15px;
+    z-index: 10;
   }
-    .brewlette .fixed-list input {
-      border-left: 0;
-      border-radius: 0;
-      border-right: 0;
-      border-top: 0;
-      padding-left: 35px;
-      padding-top: 15px;
+    .brewlette .fixed-list .list {
+      height: 100%;
+      overflow-y: auto;
+      padding-bottom: 60px;
     }
-      .brewlette .fixed-list input::before {
-        font-family: 'Glyphicons Halflings';
-        font-style: normal;
-        left: 10px;
-        line-height: 1;
-        position: absolute;
-        top: 15px;
-      }
-      .brewlette .fixed-list .location:before {
-        content: "\e062";
-      }
+    .brewlette .fixed-list input::before {
+      font-family: 'Glyphicons Halflings';
+      font-style: normal;
+      left: 10px;
+      line-height: 1;
+      position: absolute;
+      top: 15px;
+    }
+    .brewlette .fixed-list .location:before {
+      content: "\e062";
+    }
+
+  .brewlette .fixed-list .list-group-item {
+    border-radius: 0;
+  }
+
+  .brewlette .fixed-list .placeholder {
+    display: none;
+  }
+
+@media screen and (max-width: 768px) {
 
   .brewlette .navbar {
     box-shadow: 0 1px 5px #333;
