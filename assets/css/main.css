@@ -148,13 +148,13 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 }
 
 .brewlette .fixed-list {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 55px;
+  margin: 50px -15px 0;
 }
   .brewlette .fixed-list input {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 55px;
     border-left: 0;
     border-radius: 0;
     border-right: 0;
@@ -164,11 +164,6 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
     padding-top: 15px;
     z-index: 10;
   }
-    .brewlette .fixed-list .list {
-      height: 100%;
-      overflow-y: auto;
-      padding-bottom: 60px;
-    }
     .brewlette .fixed-list input::before {
       font-family: 'Glyphicons Halflings';
       font-style: normal;
@@ -180,13 +175,12 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
     .brewlette .fixed-list .location:before {
       content: "\e062";
     }
+    .brewlette .fixed-list .time:before {
+      content: "\e023";
+    }
 
   .brewlette .fixed-list .list-group-item {
     border-radius: 0;
-  }
-
-  .brewlette .fixed-list .placeholder {
-    display: none;
   }
 
 @media screen and (max-width: 768px) {
