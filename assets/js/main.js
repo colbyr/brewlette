@@ -28,11 +28,14 @@ $(function ($) {
     }
   }
 
-  function root(title, url) {
+  function root(title, url, reset) {
+    console.log(arguments);
     $title.html(title);
     $back.hide();
     history = [];
-    if (current !== url) {
+    if (reset === false) {
+      forward(url);
+    } else if (current !== url) {
       current = url;
       navigate(url);
     }
@@ -50,7 +53,7 @@ $(function ($) {
     }
 
     if ($tar.data('root')) {
-      root($tar.data('root'), url);
+      root($tar.data('root'), url, $tar.data('reset'));
     } else if (url !== '#' && url !== current) {
       forward(url);
     }
