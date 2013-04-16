@@ -1,0 +1,34 @@
+<div class="fixed-list" id="time">
+
+  <input class="time input-large" data-type="time" type="text" placeholder="What time?" />
+
+  <ul class="list list-group"></ul>
+
+</div>
+
+<script id="template-time" type="text/html">
+  <li class="list-group-item">
+    <h4>
+      <a class="value" href="/app/search-4.html">{{=semantic}}</a>
+    </h4>
+  </li>
+</script>
+
+<script type="text/javascript">
+  (function (data) {
+    var template = new t($('#template-time').html());
+    var html = '';
+    var base = moment(data.day + ' 8:00 am');
+    var $time = $('#time');
+    var i;
+    var m;
+    for (i = 0; i < 7; i++) {
+      m = base.add('hour', i);
+      html += template.render({
+        semantic: m.format('h:mm A')
+      });
+    }
+    $time.find('.list').html(html);
+    $time.fixedlist();
+  }(window.Data));
+</script>

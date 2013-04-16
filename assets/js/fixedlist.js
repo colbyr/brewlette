@@ -1,6 +1,6 @@
 ;(function ($) {
 
-  var data = {};
+  var data = window.Data = {};
 
   $.fn.fixedlist = function () {
 
