@@ -9,7 +9,11 @@
 <script id="template-time" type="text/html">
   <li class="list-group-item">
     <h4>
+    {{link}}
       <a class="value" href="/app/search-4.html">{{=semantic}}</a>
+    {{:link}}
+      {{=semantic}}
+    {{/link}}
     </h4>
   </li>
 </script>
@@ -25,6 +29,7 @@
     for (i = 0; i < 7; i++) {
       m = base.add('hour', i);
       html += template.render({
+        link: i === 2,
         semantic: m.format('h:mm A')
       });
     }

@@ -1,5 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Dancing+Script:400,700);
-
 body {
   background-color: #FFFDFA;
   color: #23313A;
@@ -150,19 +149,24 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 .brewlette .fixed-list {
   margin: 50px -15px 0;
 }
+  .brewlette .fixed-list a {
+    color: inherit;
+  }
   .brewlette .fixed-list input {
+    font-weight: bold;
     left: 0;
     position: fixed;
     right: 0;
     top: 55px;
+    border-bottom-width: 3px;
+    border-color: #BB5D50;
     border-left: 0;
     border-radius: 0;
     border-right: 0;
     border-top: 0;
-    box-shadow: 0 1px 5px #333;
     padding-left: 35px;
     padding-top: 15px;
-    z-index: 10;
+    z-index: 1000;
   }
     .brewlette .fixed-list input::before {
       font-family: 'Glyphicons Halflings';
