@@ -1,34 +1,36 @@
 <div id="results"></div>
 
 <script id="template-results" type="text/html">
-  <h2><small>Existing breaks for</small></h2>
-  <hr/>
   <div class="col-span-12">
     <h4><i class="glyphicon glyphicon-map-marker"></i> {{=location}}</h4>
     <h4><i class="glyphicon glyphicon-calendar"></i> {{=day}} @ {{=time}}</h4>
   </div>
   <hr/>
+  <h2><small>Select a break below</small></h2>
   <ul class="coffee-breaks list-unstyled">
     <li>
-      <a href="/app/breaks/dunkin-join.html">
         <div class="panel coffee-break">
-          <div class="panel-heading" style="background-image:url('/assets/img/headers/dunkin.jpg')">
-            <div class="info">
-              <div class="pull-right">
-                <i class="glyphicon glyphicon-user"></i> 3
+          <a href="/app/breaks/dunkin-join.html">
+            <div class="panel-heading" style="background-image:url('/assets/img/headers/dunkin.jpg')">
+              <div class="info">
+                <div class="pull-right">
+                  <i class="glyphicon glyphicon-user"></i> 3
+                </div>
+                The best topic
               </div>
-              The best topic
             </div>
-          </div>
+          </a>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <i class="glyphicon glyphicon-time"></i> 11:00am - April 19th
               <br/>
               <i class="glyphicon glyphicon-map-marker"></i> Dunkin' Donuts
             </li>
+            <li class="list-group-item">
+              <a href="#" class="btn btn-block invite">Join this event</a>
+            </li>
           </ul>
         </div>
-      </a>
     </li>
   </ul>
   <hr/>

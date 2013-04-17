@@ -8,14 +8,19 @@
 
 <script id="template-day" type="text/html">
   <li class="list-group-item">
-    <h4>
     {{link}}
-      <a class="value" href="/app/search-3.html">{{=semantic}}</a>
+    <a class="value" href="/app/search-3.html">
+      <h4>
+        {{=semantic}}
+        <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+      </h4>
+    </a>
     {{:link}}
+    <h4>
       {{=semantic}}
-    {{/link}}
       <span class="glyphicon glyphicon-chevron-right pull-right"></span>
     </h4>
+    {{/link}}
   </li>
 </script>
 
