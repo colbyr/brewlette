@@ -29,7 +29,6 @@ $(function ($) {
   }
 
   function root(title, url, reset) {
-    console.log(arguments);
     $title.html(title);
     $back.hide();
     history = [];
@@ -50,6 +49,10 @@ $(function ($) {
     if (document.documentElement.clientWidth < 756 &&
         $tar.is('.navbar .nav a')) {
       $toggle.click();
+    }
+
+    if ($tar.data('reset') == true) {
+      window.Data = {};
     }
 
     if ($tar.data('root')) {

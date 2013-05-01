@@ -1,30 +1,6 @@
 <div class="span12">
   <h2><small>April 19th</small></h2>
-  <ul class="coffee-breaks list-unstyled">
-    <li>
-      <a href="breaks/dunkin.html">
-        <div class="panel coffee-break">
-          <div class="panel-heading" style="background-image:url('assets/img/headers/dunkin.jpg')">
-            <div class="info">
-              <div class="pull-right">
-                <i class="glyphicon glyphicon-user"></i> 4
-              </div>
-              The best topic
-            </div>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <i class="glyphicon glyphicon-ok"></i> You're going
-              <br/>
-              <i class="glyphicon glyphicon-time"></i> 11:00 AM - April 19th
-              <br/>
-              <i class="glyphicon glyphicon-map-marker"></i> Dunkin' Donuts
-            </li>
-          </ul>
-        </div>
-      </a>
-    </li>
-  </ul>
+  <ul class="coffee-breaks list-unstyled"></ul>
 </div>
 
 <hr/>
@@ -38,8 +14,37 @@
   <br/>
 </div>
 
+<script id="template-index" type="text/html">
+  <li>
+    <a href="breaks/dunkin.html">
+      <div class="panel coffee-break">
+        <div class="panel-heading" style="background-image:url('assets/img/headers/dunkin.jpg')">
+          <div class="info">
+            <div class="pull-right">
+              <i class="glyphicon glyphicon-user"></i> 4
+            </div>
+            The best topic
+          </div>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <i class="glyphicon glyphicon-ok"></i> You're going
+            <br/>
+            <i class="glyphicon glyphicon-time"></i> {{=time}} - {{=day}}
+            <br/>
+            <i class="glyphicon glyphicon-map-marker"></i> {{=location}}
+          </li>
+        </ul>
+      </div>
+    </a>
+  </li>
+</script>
+
 <script type="text/javascript">
 (function (data) {
-  data = {};
+  var template = new t($('#template-index').html());
+  $('.coffee-breaks').html(
+    template.render(data)
+  );
 }(window.Data));
 </script>
