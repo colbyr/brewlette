@@ -8,19 +8,12 @@
 
 <script id="template-time" type="text/html">
   <li class="list-group-item">
-    {{link}}
     <h4>
       <a class="value" href="search-4.html">
         {{=semantic}}
         <span class="glyphicon glyphicon-chevron-right pull-right"></span>
       </a>
     </h4>
-    {{:link}}
-    <h4>
-      {{=semantic}}
-      <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-    </h4>
-    {{/link}}
   </li>
 </script>
 
@@ -35,7 +28,6 @@
     for (i = 0; i < 7; i++) {
       m = base.add('hour', i);
       html += template.render({
-        link: i === 2,
         semantic: m.format('h:mm A')
       });
     }

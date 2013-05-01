@@ -8,19 +8,12 @@
 
 <script id="template-day" type="text/html">
   <li class="list-group-item">
-    {{link}}
     <a class="value" href="search-3.html">
       <h4>
         {{=semantic}}
         <span class="glyphicon glyphicon-chevron-right pull-right"></span>
       </h4>
     </a>
-    {{:link}}
-    <h4>
-      {{=semantic}}
-      <span class="glyphicon glyphicon-chevron-right pull-right"></span>
-    </h4>
-    {{/link}}
   </li>
 </script>
 
@@ -35,7 +28,6 @@
     for (i = 0; i < 14; i++) {
       m = base.add('day', i);
       html += template.render({
-        link: i === 2,
         semantic: m.format('L')
       });
     }

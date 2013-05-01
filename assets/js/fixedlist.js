@@ -28,8 +28,18 @@
     });
 
     $list.on('click', '.list-group-item a', function (e) {
-      data[type] = this.innerText;
-      console.log(data);
+      data[type] = this.innerText.trim();
+      switch (type) {
+        case 'day':
+          var parts = data[type].split('/');
+          parts[1] = parseInt(parts[1]) + 1 + '';
+          if (parts[1].length < 2) {
+            parts[1] = '0' + parts[1];
+          }
+          data.nextday = parts.join('/');
+          break;
+        default:
+      }
     });
 
   };
