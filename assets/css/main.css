@@ -96,6 +96,26 @@ body > .container,
       margin-bottom: 5px;
     }
 
+.brewlette .search-result {
+  color: #4C3619;
+  font-size: 1.2em;
+}
+  .brewlette .search-result a {
+    color: inherit;
+  }
+  .brewlette .search-result .btn {
+    color: #fff;
+  }
+  .brewlette .search-result p {
+    padding-top: .2em;
+    margin-bottom: 0;
+  }
+  .brewlette .search-result .btn {
+    display: block;
+    float: right;
+    margin-left: .5em;
+  }
+
 .brewlette .coffee-breaks a:active,
 .brewlette .coffee-breaks a:hover {
   text-decoration: none;

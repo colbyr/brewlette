@@ -2,35 +2,77 @@
 
 <script id="template-results" type="text/html">
   <div class="col-span-12">
-    <h4><i class="glyphicon glyphicon-map-marker"></i> {{=location}}</h4>
-    <h4><i class="glyphicon glyphicon-calendar"></i> {{=day}} @ {{=time}}</h4>
+    <h3 class="text-center">Join an existing break</h3>
   </div>
+
+  <!-- best match -->
+  <h2 class="text-center">
+    <small>
+      <i class="glyphicon glyphicon-calendar"></i> April 19th
+      &nbsp;
+      <i class="glyphicon glyphicon-time"></i> {{=time}}
+    </small>
+  </h2>
   <hr/>
-  <h2><small>Select a break below</small></h2>
   <ul class="coffee-breaks list-unstyled">
     <li>
-        <div class="panel coffee-break">
-          <a href="breaks/dunkin-join.html">
-            <div class="panel-heading" style="background-image:url('assets/img/headers/dunkin.jpg')">
-              <div class="info">
-                <div class="pull-right">
-                  <i class="glyphicon glyphicon-user"></i> 3
-                </div>
-                The best topic
-              </div>
-            </div>
+      <div class="panel search-result clearfix">
+        <div class="pull-right">
+          <a class="btn invite" data-root="Upcoming" href="home/index.html">
+            <i class="glyphicon glyphicon-plus"></i>
           </a>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <i class="glyphicon glyphicon-time"></i> 11:00am - April 19th
-              <br/>
-              <i class="glyphicon glyphicon-map-marker"></i> Dunkin' Donuts
-            </li>
-            <li class="list-group-item">
-              <a href="#" class="btn btn-block invite">Join this event</a>
-            </li>
-          </ul>
         </div>
+        <p>
+          <a href="breaks/dunkin-join.html">
+            <i class="glyphicon glyphicon-map-marker"></i> Dunkin' Donuts
+            &nbsp;
+            &nbsp;
+            <i class="glyphicon glyphicon-user"></i> 2
+          </a>
+        </p>
+      </div>
+    </li>
+    <li>
+      <div class="panel search-result clearfix">
+        <div class="pull-right">
+          <a class="btn invite" href="#">
+            <i class="glyphicon glyphicon-plus"></i>
+          </a>
+        </div>
+        <p>
+          <i class="glyphicon glyphicon-map-marker"></i> The Krafted Cup
+          &nbsp;
+          &nbsp;
+          <i class="glyphicon glyphicon-user"></i> 1
+        </p>
+      </div>
+    </li>
+  </ul>
+
+  <!-- ok match -->
+  <h2 class="text-center">
+    <small>
+      <i class="glyphicon glyphicon-calendar"></i> April 20th
+      &nbsp;
+      <i class="glyphicon glyphicon-time"></i> {{=time}}
+    </small>
+  </h2>
+  <hr/>
+  <ul class="coffee-breaks list-unstyled">
+    <li>
+      <div class="panel search-result clearfix">
+        <div class="pull-right">
+          <a class="btn invite" href="#">
+            <i class="glyphicon glyphicon-plus"></i>
+          </a>
+        </div>
+        <p>
+          <i class="glyphicon glyphicon-map-marker"></i> Starbucks
+          &nbsp;
+          &nbsp;
+          <i class="glyphicon glyphicon-user"></i> 3
+        </p>
+      </div>
     </li>
   </ul>
   <hr/>
