@@ -52,7 +52,9 @@ $(function ($) {
     }
 
     if ($tar.data('reset') == true) {
-      window.Data = {};
+      for (var k in window.Data) {
+        window.Data[k] = '';
+      }
     }
 
     if ($tar.data('root')) {
