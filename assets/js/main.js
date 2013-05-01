@@ -6,7 +6,7 @@ $(function ($) {
   var $title = $('#page-title');
   var $toggle = $('.navbar-toggle');
 
-  var current = 'app/index.html';
+  var current = 'index.html';
   var history = [];
 
   function back() {
