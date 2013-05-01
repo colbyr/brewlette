@@ -62,7 +62,7 @@ $(function ($) {
   function navigate(url) {
     $container.hide();
     $loader.show();
-    $.get('partials' + url, function (data) {
+    $.get('partials/' + url, function (data) {
       $loader.hide();
       $container.html(data).show();
     });
