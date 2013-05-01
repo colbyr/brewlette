@@ -6,7 +6,7 @@ $(function ($) {
   var $title = $('#page-title');
   var $toggle = $('.navbar-toggle');
 
-  var current = '/app/index.html';
+  var current = 'app/index.html';
   var history = [];
 
   function back() {
@@ -62,7 +62,7 @@ $(function ($) {
   function navigate(url) {
     $container.hide();
     $loader.show();
-    $.get('/partials' + url, function (data) {
+    $.get('partials' + url, function (data) {
       $loader.hide();
       $container.html(data).show();
     });
